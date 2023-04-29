@@ -1,5 +1,7 @@
 package pro.skypro.homework;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.beans.Transient;
 import java.util.Objects;
 
@@ -11,8 +13,8 @@ public class Employee {
 
 
     public Employee(String firstName, String lastName, int salary, int department) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.firstName = StringUtils.capitalize(firstName.toLowerCase());
+        this.lastName = StringUtils.capitalize(lastName.toLowerCase());
         this.salary = salary;
         this.department = department;
     }
